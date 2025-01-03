@@ -2,7 +2,7 @@
 
 ## Aufgabenstellung
 
-Erstellen Sie eine einfache, aber korrekt aufgebaute HTML-Seite mit den folgenden Elementen:
+Erstellen Sie eine einfache, aber korrekt aufgebaute HTML-Seite mit den folgenden Elementen::
 
 - HTML5 Doctype
 - Titel: Strukturelemente
