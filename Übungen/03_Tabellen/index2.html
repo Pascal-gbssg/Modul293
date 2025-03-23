@@ -3,14 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Klasse INx1a</title>
+    <title>Tabelle</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
-    <table border="1">
-		<thead>
-			<tr>
-			<th colspan="5">Klasse INA1a</th>
-			</tr>
+
+    <h2>Beispiel-Tabelle</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Spalte 1</th>
+                <th>Spalte 2</th>
+                <th>Spalte 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Wert 1</td>
+                <td>Wert 2</td>
+                <td>Wert 3</td>
+            </tr>
+            <tr>
+                <td>Wert 4</td>
+                <td>Wert 5</td>
+                <td>Wert 6</td>
+            </tr>
+            <tr>
+                <td>Wert 7</td>
+                <td>Wert 8</td>
+                <td>Wert 9</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
+Falls du eine spezielle Tabelle im Kopf hast, sag mir, wie sie aussehen soll! 😊
+
+
+
+
+
+
+
+Du:
+
+ChatGPT:
+Hier ist der HTML-Code für die Tabelle, basierend auf deinem Bild:
+
+html
+Kopieren
+Bearbeiten
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klasse INx1a</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 5px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .schulnote {
+            font-style: italic;
+            font-weight: bold;
+        }
+        .name, .vorname {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 style="text-align: center;">Klasse INx1a</h2>
+
+    <table>
+        <thead>
             <tr>
                 <th>Vorname</th>
                 <th>Name</th>
@@ -21,8 +113,8 @@
         </thead>
         <tbody>
             <tr>
-                <td rowspan="4" class="vorname">Hella</td>
-                <td rowspan="4" class="name">Helmer</td>
+                <td rowspan="5" class="vorname">Hella</td>
+                <td rowspan="5" class="name">Helmer</td>
                 <td>1</td>
                 <td>50</td>
                 <td>5.2</td>
@@ -43,8 +135,8 @@
             </tr>
 
             <tr>
-                <td rowspan="4" class="vorname">Petra</td>
-                <td rowspan="4" class="name">Kunadt</td>
+                <td rowspan="5" class="vorname">Petra</td>
+                <td rowspan="5" class="name">Kunadt</td>
                 <td>1</td>
                 <td>32</td>
                 <td>3.7</td>
@@ -65,8 +157,8 @@
             </tr>
 
             <tr>
-                <td rowspan="4" class="vorname">Dominik</td>
-                <td rowspan="4" class="name">Breier</td>
+                <td rowspan="5" class="vorname">Dominik</td>
+                <td rowspan="5" class="name">Breier</td>
                 <td>1</td>
                 <td>14</td>
                 <td>2.2</td>
@@ -87,8 +179,8 @@
             </tr>
 
             <tr>
-                <td rowspan="4" class="vorname">Aaron</td>
-                <td rowspan="4" class="name">Göllner</td>
+                <td rowspan="5" class="vorname">Aaron</td>
+                <td rowspan="5" class="name">Göllner</td>
                 <td>1</td>
                 <td>45</td>
                 <td>4.8</td>

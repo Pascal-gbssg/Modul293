@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unsere Produkte</title>
+    <style>
+
+        h2 { 
+          color: red;
+          background-color: beige;
+          font-size: 1.5em;
+        }
+        
+        p {
+          color: brown;
+        }
+        
+        #gallery {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+}
+
+#gallery img {
+	width: 100%;
+	box-sizing: border-box;
+	margin-bottom: 1em;
+}
+
+#blackwhite {
+	filter: grayscale(1);
+	border: solid 2vmin #eee;
+	border-bottom-color: #fff;
+	border-left-color: #eee;
+	border-radius: 2px;
+	border-right-color: #eee;
+	border-top-color: #ddd;
+	box-shadow: 0 0 5px 0 rgb(0 0 0 /.25) inset, 0 5px 10px 5px rgb(0 0 0 / .25);
+	padding: 3vmin;
+	position: relative;
+}
+
+#blackwhite:before {
+	border-radius: 2px;
+	bottom: -2vmin;
+	box-shadow: 0 2px 5px 0 rgb(0 0 0 / .25) inset;
+	content: "";
+	left: -2vmin;
+	position: absolute;
+	right: -2vmin;
+	top: -2vmin;
+}
+
+#blackwhite:after {
+	border-radius: 2px;
+	bottom: -2.5vmin;
+	box-shadow: 0 2px 5px 0 rgb(0 0 0 / .25);
+	content: "";
+	left: -2.5vmin;
+	position: absolute;
+	right: -2.5vmin;
+	top: -2.5vmin;
+}
+
+#two {
+	border: 1em groove gold;
+}
+
+#three {
+	border: 1em double black;
+	filter: url('#KantenErkennung');
+}
+
+svg {
+	border: none;
+}
+
+        </style>
+</head>
+<body>
+    <nav>
+        <ul>
+          <li><a tabindex="0" aria-current="page">Bilder</a></li>
+          <li><a href="index.html">Startseite</a></li>
+          <li><a href="preise.html">Unsere Preise</a></li>
+          <li><a href="kontakt.html">Kontakt und Impressum</a></li>
+        </ul>
+        </nav>
+  <p>Unsere Produkte</p>
+
+  <p>Dieser Text enthält ein <span style="color: red; font-weight: bold;">hervorgehobenes Wort</span>.</p>
+
+
+  <img src="img/cabinet.svg" alt="Kommode" width="200" height="200">
+  <img src="img/dresser.svg" alt="Kommode mit Schubladen" width="200" height="200">
+  <img src="img/filing-cabinet.svg" alt="Aktenschrank" width="200" height="200">
+  <img src="img/table.svg" alt="Schreibtisch" width="200" height="200">    
+  <img src="img/cupboard.svg" alt="Schrank" width="500" height="500">
+  <img src="img/bed-modern.svg" alt="Modernes Bett">
+  <img src="img/chair.svg" 3x alt="Schaukelstuhl" >
+  <img srcset="img/desk.svg" alt="Schreibtisch">
+    
+<br><br><br>
+  <video controls width="640" height="480">
+    <source src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Carpentry.og" type="video/ogg">
+    <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/e/e1/Carpentry.ogv/Carpentry.ogv.480p.vp9.webm" type="video/webm">
+    Dieser Film zeigt eine Szene aus unserer Schreinerei.<br>
+    Ihr Browser kann dieses Video nicht wiedergeben. Sie können es unter <a href="#">Link-Addresse</a> abrufen.
+  </video>
+
+  <h1 id="rahmen">Bilder mit Rahmen und Filtern</h1>
+  <div id="gallery">
+      <figure> <img id="blackwhite" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Big_Ben_%288119807912%29.jpg/379px-Big_Ben_%288119807912%29.jpg"
+          alt="Big Ben">
+          <figcaption><code>filter: grayscale(1);</code>
+          </figcaption>
+      </figure>
+      <figure> <img id="two" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Big_Ben_%288119807912%29.jpg/379px-Big_Ben_%288119807912%29.jpg"
+          alt="Big Ben">
+          <figcaption><code>border:1em groove gold;</code>
+          </figcaption>
+      </figure>
+      <figure> <img id="three" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Big_Ben_%288119807912%29.jpg/379px-Big_Ben_%288119807912%29.jpg"
+          alt="Big Ben">
+          <figcaption><code>border:1em double black;</code>
+              <br><code>filter: #kantenErkennung</code>
+          </figcaption>
+      </figure>
+  </div>
+  <svg>
+      <defs>
+          <filter id="KantenErkennung">
+              <feConvolveMatrix order="3" preserveAlpha="true" kernelMatrix="
+            -1 -1 -1
+            -1  8 -1
+            -1 -1 -1" divisor="1.0" bias="0.0" /> </filter>
+      </defs>
+  </svg>
+  
+</body>
+</html>
