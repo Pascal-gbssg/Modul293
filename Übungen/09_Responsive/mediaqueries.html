@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Hintergrundfarbe</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.5s ease;
+        }
+
+        @media (max-width: 1400px) { body { background-color: #ffcccc; } }
+        @media (max-width: 1300px) { body { background-color: #ff9999; } }
+        @media (max-width: 1250px) { body { background-color: #ff6666; } }
+        @media (max-width: 1120px) { body { background-color: #ff3333; } }
+        @media (max-width: 1040px) { body { background-color: #ff0000; } }
+        @media (max-width: 960px) { body { background-color: #cc0000; } }
+        @media (max-width: 880px) { body { background-color: #990000; } }
+        @media (max-width: 800px) { body { background-color: #660000; } }
+        @media (max-width: 720px) { body { background-color: #330000; } }
+        @media (max-width: 660px) { body { background-color: #000000; color: white; } }
+        @media (max-width: 580px) { body { background-color: #003366; } }
+        @media (max-width: 500px) { body { background-color: #006699; } }
+    </style>
+</head>
+<body>
+    <p>Ändere die Größe des Fensters, um die Hintergrundfarbe zu ändern!</p>
+</body>
+</html>

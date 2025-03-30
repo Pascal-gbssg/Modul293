@@ -1,0 +1,151 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f8f8;
+}
+
+.header {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.layout {
+    display: flex; /* Flexbox für horizontale Anordnung */
+    width: 100%;
+    flex-direction: row; /* Standard horizontaler Layout */
+}
+
+.navbar {
+    width: 200px; /* Feste Breite für die Navigation */
+    display: flex;
+    flex-direction: column; /* Die Links untereinander anordnen */
+    justify-content: flex-start;
+    background-color: red; /* Rote Hintergrundfarbe */
+    padding: 20px;
+    gap: 20px;
+    margin-right: 20px; /* Abstand zur Artikelliste */
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px; /* Schriftgröße auf 25px setzen */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar img {
+    width: 50px; /* Breite der Icons auf 50px setzen */
+    height: 50px; /* Höhe ebenfalls auf 50px setzen */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr ));
+    gap: 20px;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 20px;
+    order: -1; /* Stellt sicher, dass das Bild optisch oben ist */
+}
+
+.card h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card ul li {
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+button {
+    margin-top: auto;
+    width: 100%;
+    background-color: #c00;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #a00;
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 768px) {
+    .layout {
+        flex-direction: column; /* Die Navigation wird oben angezeigt und die Karten darunter */
+    }
+    .navbar {
+        width: 100%; /* Navigation nimmt volle Breite auf kleinen Bildschirmen */
+        flex-direction: row; /* Die Links nebeneinander anordnen */
+        padding: 10px;
+        margin-right: 0; /* Kein Abstand mehr zur Artikelliste */
+        gap: 40px; /* Abstand zwischen den Links */
+        justify-content: center; /* Zentrieren der Links */
+    }
+    .container {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 500px) {
+    .navbar a {
+        font-size: 0; /* Setzt die Schriftgröße auf 0, sodass der Text nicht sichtbar ist */
+    }
+
+    .navbar a span {
+        display: none; /* Stellt sicher, dass auch der Text (span) ausgeblendet wird */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+    .card {
+        width: 100%;
+        max-width: 350px;
+    }
+    .card h2 {
+        font-size: 1.2em;
+    }
+    button {
+        font-size: 0.8em;
+        padding: 6px;
+    }
+}
