@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  .hero-background {
+    background-image: url('https://images.unsplash.com/photo-1593642532973-d31b6557fa68'); 
+    background-size: cover; /* Streckt das Bild über den gesamten Viewport */
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Füllt den gesamten Viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .content {
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Halbtransparenter Hintergrund für besseren Kontrast */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  

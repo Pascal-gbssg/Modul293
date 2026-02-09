@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responsives Bild mit srcset und sizes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background-color: #f5f5f5;
+    }
+
+    .bild-container {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    p {
+      max-width: 600px;
+      margin: 1rem auto;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bild-container">
+    <img 
+    src="https://picsum.photos/id/1015/800/600" 
+    srcset="
+      https://picsum.photos/id/1011/400/300 400w,
+      https://picsum.photos/id/1015/800/600 800w,
+      https://picsum.photos/id/1021/1200/900 1200w"
+    sizes="(max-width: 600px) 400px,
+           (max-width: 1024px) 800px,
+           1200px"
+    alt="Beispielbild von Lorem Picsum mit ID"
+    loading="lazy">
+  </div>
+
+</body>
+</html>
