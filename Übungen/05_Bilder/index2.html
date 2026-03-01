@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bildergalerie</title>
+</head>
+<body>
+
+    <h1>Bildergalerie</h1>
+
+    <!-- Galerie mit kleinen Vorschaubildern -->
+    <div>
+        <!-- Vorschaubilder -->
+        <a href="img/bed-modern.svg" target="_self">
+            <img src="img/bed-modern.svg" alt="Bild 1" width="150" height="100">
+        </a>
+        <a href="img/cabinet.svg" target="_top">
+            <img src="img/cabinet.svg" alt="Bild 2" width="150" height="100">
+        </a>
+    </div>
+
+    <h1>Bildergalerie mit Lightbox</h1>
+
+    <!-- Galerie mit Vorschaubildern -->
+    <div class="gallery" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+        <img src="img/desk.svg" alt="Bild 1" onclick="openLightbox('img/desk.svg')" style="width: 150px; height: 100px; cursor: pointer; transition: transform 0.3s ease;">
+    </div>
+
+    <!-- Lightbox-Überlagerung -->
+    <div id="lightbox" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); justify-content: center; align-items: center; z-index: 1000;">
+        <button class="close-btn" onclick="closeLightbox()" style="position: absolute; top: 10px; right: 10px; font-size: 30px; color: white; background: rgba(0, 0, 0, 0.6); border: none; padding: 10px; cursor: pointer;">&times;</button>
+        <img id="lightbox-image" src="" alt="Lightbox Image" style="max-width: 90%; max-height: 80%; border: 5px solid white;">
+    </div>
+
+    <script>
+        // Funktion zum Öffnen der Lightbox mit dem großen Bild
+        function openLightbox(imageSrc) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightbox-image');
+            lightboxImage.src = imageSrc; // Setze die Quelle des großen Bildes
+            lightbox.style.display = 'flex'; // Zeige die Lightbox an
+        }
+
+        // Funktion zum Schließen der Lightbox
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.style.display = 'none'; // Verberge die Lightbox
+        }
+    </script>
+
+
+<h1>Bildergalerie mit Popover- 1</h1>
+<ul id="galerie">
+	<li>
+		<button popovertarget="image1"><img src="//wiki.selfhtml.org/images/8/80/Dummy-1.jpg" alt="Spaß in der Sonne" width="100">
+		</button>
+	</li>
+	<li>
+		<button popovertarget="image2"><img src="//wiki.selfhtml.org/images/e/e7/Dummy-2.jpg" alt="Berg im Morgennebel" width="100">
+		</button>
+	</li>
+</ul>
+<figure id="image1" popover> <img src="//wiki.selfhtml.org/images/8/80/Dummy-1.jpg" alt="Spaß in der Sonne">
+	<figcaption>Spaß in der Sonne</figcaption>
+</figure>
+<figure id="image2" popover> <img src="//wiki.selfhtml.org/images/e/e7/Dummy-2.jpg" alt="Berg im Morgennebel">
+    <figcaption>Berg im Morgennebel</figcaption>
+</figure>
+</body>
+</html>
